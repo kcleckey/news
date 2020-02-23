@@ -36,8 +36,12 @@
         <% end %>
       </ul>
       <p>
-          
+          And the top headlines for today are:
       </p>
+      <ul>
+        <% for title in @top_headlines %>
+            <li> <a href= <%= "#{title["url"]}"%>><%="#{title["title"]}" %></a> </li> 
+        <% end %>
       <p>
         <a href="/" class="btn btn-primary">Enter another city!</a>
       </p>
