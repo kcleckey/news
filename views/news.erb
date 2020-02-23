@@ -18,13 +18,21 @@
     <!-- Your own CSS -->
     <link rel="stylesheet" href="/styles.css">
 
-    <title>Dice</title>
+    <title>News & Weather</title>
   </head>
   <body>
 
     <div class="container mt-5">
-      <h1>News</h1>
-      <p> this is the informaiton will go <p1>
+      <h1>News & Weather</h1>
+      <p> 
+        "It is currently <%= @current_temp %> and <%= @conditions %>." 
+      </p>
+      <p>
+      #THIS IS WHERE THE FORECAST GOES
+      </p>
+      <p>
+      #THIS IS WHERE THE NEWS GOES
+      </p>
       <p>
         <a href="/" class="btn btn-primary">Enter another city!</a>
       </p>
