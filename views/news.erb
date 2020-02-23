@@ -25,13 +25,18 @@
     <div class="container mt-5">
       <h1>News & Weather</h1>
       <p> 
-        "It is currently <%= @current_temp %> and <%= @conditions %>." 
+        It is currently <%= @current_temp %> and <%= @conditions %>.
       </p>
       <p>
-      #THIS IS WHERE THE FORECAST GOES
+      The extended forecast is: (ADD DAYS OF THE WEEK)
       </p>
+      <ul>
+        <% for day in @dailyforecast %>
+            <li> <%= "A high temperature of #{day["temperatureHigh"]} and #{day["summary"]}" %> </li>
+        <% end %>
+      </ul>
       <p>
-      #THIS IS WHERE THE NEWS GOES
+          
       </p>
       <p>
         <a href="/" class="btn btn-primary">Enter another city!</a>
