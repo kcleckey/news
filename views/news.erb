@@ -7,7 +7,8 @@
 
     <!-- Google Fonts -->
     <!-- Swap out "Roboto" for the font(s) you want to use -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:900|Nunito: 400, 800&display=swap"
+    rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
@@ -24,27 +25,31 @@
 
     <div class="container mt-5">
       <h1>News & Weather</h1>
-      <p> 
-        It is currently <%= @current_temp %> and <%= @conditions %>.
-      </p>
-      <p>
-      The extended forecast is: (ADD DAYS OF THE WEEK)
-      </p>
+      <h2> 
+        The weather is currently <%= @current_temp %> and <%= @conditions %>.
+      </h2>
+      <h3>
+      The extended forecast is:
+      </h3>
       <ul>
         <% for day in @dailyforecast %>
             <li> <%= "A high temperature of #{day["temperatureHigh"]} and #{day["summary"]}" %> </li>
         <% end %>
       </ul>
-      <p>
+        <hr class="mt">
+      <h2>
           And the top headlines for today are:
-      </p>
+      </h2>
       <ul>
         <% for title in @top_headlines %>
             <li> <a href= <%= "#{title["url"]}"%>><%="#{title["title"]}" %></a> </li> 
         <% end %>
-      <p>
+    </div>
+    <div class="container mt-5">
+    
+    <p>
         <a href="/" class="btn btn-primary">Enter another city!</a>
-      </p>
+    </p>    
     </div>
 
     <!-- Optional JavaScript -->
